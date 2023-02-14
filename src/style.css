@@ -1,0 +1,151 @@
+:root {
+  --color-primary: #181F22;
+  --color-secondary: #fff;
+  --color-tertiary: #005A77;
+  --bodycopy: 16px;
+  --bodycopy-lh: 24px;
+  --font-base: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --title-l: 88px;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* cursor: none; */
+}
+
+.header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-secondary);
+  position: relative;
+  font-family: var(--font-base);
+  font-size: var(--font-size);
+}
+
+.header a::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  right: 100%;
+  background: var(--color-secondary);
+  position: absolute;
+  transition: right 0.3s ease;
+}
+
+.header a:hover::after {
+  right: 24px;
+}
+
+.header svg path {
+  stroke: var(--color-secondary);
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  font-size: 16px;
+  height: 56px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-base);
+  opacity: 0;
+  animation: appearIn 0.5s ease 0.5s forwards;
+}
+
+.ripple .circle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple .circle.animate {
+  animation: ripple 0.75s linear;
+}
+
+.ripple-button {
+  background-color: var(--color-primary);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+
+.cursor {
+  width: 24px;
+  height: 24px;
+  position: fixed;
+  z-index: 1;
+  border-radius: 96px;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-secondary);
+  text-transform: uppercase;
+  color: var(--color-negative);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-base);
+  font-size: var(--font-size);
+  font-weight: 600;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}
