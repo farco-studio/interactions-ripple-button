@@ -8,6 +8,7 @@ const cursorMargin = cursorSize / 2;
 
 const initStateCursor = () => {
   gsap.set(cursor, {
+    opacity: 0,
     left: `calc(50% - ${cursorMargin}px)`,
     top: `calc(50% - ${cursorMargin}px)`,
   });
@@ -16,6 +17,7 @@ const initStateCursor = () => {
 const mouseMove = (e) => {
   gsap.to(cursor, {
     duration: 0.5,
+    opacity: 1,
     left: `${e.clientX - cursorMargin}px`,
     top: `${e.clientY - cursorMargin}px`,
     ease: "power2.out",
