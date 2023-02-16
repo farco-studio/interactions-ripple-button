@@ -1,4 +1,4 @@
-![Captura de Pantalla 2023-02-16 a las 13 43 15](https://user-images.githubusercontent.com/854320/219369982-b191e56d-bec2-4105-99fb-5d23eb938f79.jpg)
+<img width="1434" alt="Captura de Pantalla 2023-02-16 a las 14 03 48" src="https://user-images.githubusercontent.com/854320/219372499-cae096d2-f9fe-44f6-b9ec-65da3440cb7c.png">
 
 # Ripple Button Effect
 
