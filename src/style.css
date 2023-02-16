@@ -7,17 +7,10 @@
   --font-base: "Inter", sans-serif;
 }
 
-@media screen and (max-width: 767px) {
-  :root {
-    --title-l: 88px;
-  }
-}
-
 body,
 html {
   margin: 0;
   padding: 0;
-  /* cursor: none; */
 }
 
 .header {
@@ -35,7 +28,7 @@ html {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--color-tertiary);
   position: relative;
   font-family: var(--font-base);
   font-size: var(--font-size);
@@ -48,7 +41,7 @@ html {
   bottom: -2px;
   left: 0;
   right: 100%;
-  background: var(--color-secondary);
+  background: var(--color-tertiary);
   position: absolute;
   transition: right 0.3s ease;
 }
@@ -58,7 +51,7 @@ html {
 }
 
 .header svg path {
-  stroke: var(--color-secondary);
+  stroke: var(--color-tertiary);
 }
 
 .ripple {
