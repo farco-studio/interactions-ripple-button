@@ -4,7 +4,7 @@
 
 Free, refined interactions to inspire our community and make the web a more beautiful place.
 
-[Demo](https://interactions-ripple-button.onrender.com/)
+[Demo](https://interactions-button-ripple.onrender.com)
 
 
 ## Installation
